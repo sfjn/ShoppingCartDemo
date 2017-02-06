@@ -30,12 +30,12 @@ namespace SinglePageApp1
             //app.UseWebApi(httpConfiguration);
 
             // Make ./public the default root of the static files in our Web Application.
-            app.UseFileServer(new FileServerOptions
-            {
-                RequestPath = new PathString(string.Empty),
-                FileSystem = new PhysicalFileSystem("./public"),
-                EnableDirectoryBrowsing = true,
-            });
+     //       app.UseFileServer(new FileServerOptions
+    //        {
+   //             RequestPath = new PathString(string.Empty),
+  //              FileSystem = new PhysicalFileSystem("./public"),
+ //               EnableDirectoryBrowsing = true,
+//            });
 
             app.UseStageMarker(PipelineStage.MapHandler);
         }

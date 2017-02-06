@@ -1,5 +1,0 @@
-C:\Users\Johann\Documents\GitHub\ShoppingCartDemo\src\ShoppingCartDemo.Core\bin\Debug\ShoppingCartDemo.Core.dll
-C:\Users\Johann\Documents\GitHub\ShoppingCartDemo\src\ShoppingCartDemo.Core\bin\Debug\ShoppingCartDemo.Core.pdb
-C:\Users\Johann\Documents\GitHub\ShoppingCartDemo\src\ShoppingCartDemo.Core\obj\Debug\ShoppingCartDemo.Core.csprojResolveAssemblyReference.cache
-C:\Users\Johann\Documents\GitHub\ShoppingCartDemo\src\ShoppingCartDemo.Core\obj\Debug\ShoppingCartDemo.Core.dll
-C:\Users\Johann\Documents\GitHub\ShoppingCartDemo\src\ShoppingCartDemo.Core\obj\Debug\ShoppingCartDemo.Core.pdb
