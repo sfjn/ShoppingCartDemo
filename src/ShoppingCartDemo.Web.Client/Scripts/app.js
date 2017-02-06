@@ -22,6 +22,11 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
                 templateUrl: '/views/about',
                 controller: 'AboutCtrl'
             })
+            .state('cart', {
+                url: '/cart',
+                templateUrl: '/views/cart',
+                controller: 'CartCtrl'
+            })
             .state('login', {
                 url: '/login',
                 layout: 'basic',
