@@ -4,7 +4,9 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace App.ShoppingCartDemo.Web
+using App.ShoppingCartDemo.Web;
+
+namespace App.Web1
 {
     using System.Web;
     using System.Web.Optimization;

@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Johan Nordstrom -- Senior Developer -- johan.nordstrom.consulting@gmail.com
 
 # THANKS
 
-    <name>
+    Serenata Flowers
 
 # TECHNOLOGY COLOPHON
 

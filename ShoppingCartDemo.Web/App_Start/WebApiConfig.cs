@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace ShoppingCartDemo.Web
+namespace App.ShoppingCartDemo.Web
 {
     public static class WebApiConfig
     {
@@ -9,7 +9,7 @@ namespace ShoppingCartDemo.Web
             // Web API configuration and services
 
             // Web API routes
-            //config.MapHttpAttributeRoutes();
+            config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
