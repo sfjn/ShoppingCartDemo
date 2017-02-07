@@ -2,6 +2,7 @@
 
 angular.module('app.controllers', [])
 
+    // controller for cart
     // Path: /
     .controller('HomeCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
         $scope.$root.title = 'Shopping Cart Demo for Serenata Flowers';
@@ -39,7 +40,7 @@ angular.module('app.controllers', [])
     }])
 
     // Path: /login
-    .controller('CartCtrl', ['$scope', '$location', '$window', function ($scope, $window, shoppingData, shared) {
+    .controller('CartCtrl', ['$scope', '$location', '$window', function ($scope, $window, $http) {
         $scope.items = [];
 
         $scope.item = {};

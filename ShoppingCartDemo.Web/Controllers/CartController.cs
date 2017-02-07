@@ -55,7 +55,7 @@ namespace App.ShoppingCartDemo.Web.Controllers
 
         public void RemoveItem(CartItem item)
         {
-            _items.Remove(item);
+            _items.RemoveAt(_items.IndexOf(item));
         }
     }
 
