@@ -1,23 +1,42 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Startup.cs" company="">
-//   Copyright © 2017 
-// </copyright>
-// --------------------------------------------------------------------------------------------------------------------
+ï»¿using Microsoft.Owin;
+using SinglePageApp1;
 
-[assembly: Microsoft.Owin.OwinStartup(typeof(App.ShoppingCartDemo.Web.Startup))]
-
-namespace App.ShoppingCartDemo.Web
+[assembly: OwinStartup(typeof(Startup))]
+namespace SinglePageApp1
 {
+    using Microsoft.Owin.Extensions;
+    //using Microsoft.Owin.FileSystems;
+    //using Microsoft.Owin.StaticFiles;
     using Owin;
+    using System.Web.Http;
 
-    public partial class Startup
+    public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            //// For more information on how to configure your application, visit:
-            //// http://go.microsoft.com/fwlink/?LinkID=316888
+            var httpConfiguration = new HttpConfiguration();
 
-            //this.ConfigureAuth(app);
+            // Configure Web API Routes:
+            // - Enable Attribute Mapping
+            // - Enable Default routes at /api.
+            //httpConfiguration.MapHttpAttributeRoutes();
+            httpConfiguration.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+
+            //app.UseWebApi(httpConfiguration);
+
+            // Make ./public the default root of the static files in our Web Application.
+            //       app.UseFileServer(new FileServerOptions
+            //        {
+            //             RequestPath = new PathString(string.Empty),
+            //              FileSystem = new PhysicalFileSystem("./public"),
+            //               EnableDirectoryBrowsing = true,
+            //            });
+
+            app.UseStageMarker(PipelineStage.MapHandler);
         }
     }
 }
