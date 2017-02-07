@@ -2,27 +2,27 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using App.ShoppingCartDemo.Web.ViewModels;
+using Microsoft.Owin.Logging;
 
 namespace App.ShoppingCartDemo.Web.Controllers
 {
     public class CartController : ApiController
     {
-        ShoppingCart cart;
+        public ILogger Logger { get; set; }
+        private CartViewModel cart;
         public CartController()
         {
-            cart = new ShoppingCart();
+            cart = new CartViewModel();
         }
-        public IEnumerable<CartItem> GetItems()
-        {
-            return new List<CartItem>() { };
-        }
-        public IEnumerable<CartItem> Get()
+
+        public IEnumerable<CartItemViewModel> Get()
         {
             return cart.GetAllItems();
         }
 
         // POST api/<controller>
-        public void Post(CartItem item)
+        public void Post(CartItemViewModel item)
         {
             cart.AddCartItem(item);
         }
@@ -33,34 +33,5 @@ namespace App.ShoppingCartDemo.Web.Controllers
             cart.RemoveItem(null);
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
-    }
-
-    internal class ShoppingCart
-    {
-        IList<CartItem> _items = new List<CartItem>()
-        {
-                new CartItem() { Name = "Foobar 1" },
-                new CartItem() { Name = "Foobar 2" },
-                new CartItem() { Name = "Foobar 3" },
-        };
-        public IEnumerable<CartItem> GetAllItems()
-        {
-            return _items;
-        }
-
-        public void AddCartItem(CartItem item)
-        {
-            _items.Add(item);
-        }
-
-        public void RemoveItem(CartItem item)
-        {
-            _items.RemoveAt(_items.IndexOf(item));
-        }
-    }
-
-    public class CartItem
-    {
-        public string Name { get; set; }
     }
 }

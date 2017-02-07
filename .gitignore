@@ -2,3 +2,4 @@ SinglePageApp1
 bin
 obj
 packages
+.nuget

@@ -1,7 +1,7 @@
 ﻿@{
     PageData["title"] = "AngularJS SPA Template for Visual Studio";
 }
-<div class="container">
+<div class="container" ng-controller="cart">
     <div class="well well-sm">
         <strong>List of Products</strong>
         <div class="btn-group">
@@ -12,6 +12,20 @@
     </div>
     <div id="products" class="row list-group">
         
+ <tr ng-repeat="item in items | orderBy:mySortFunction | filter: search">
+            <td>
+                {{item.Name}}
+            </td>
+            <td>
+                {{item.Price | rupee}}
+            </td>
+            <td>
+                {{item.Quantity}}
+            </td>
+            <td>
+                <input type="button" value="Remove" ng-click="removeItem(item.ID)" />
+            </td>
+        </tr>
         <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt=""/>
