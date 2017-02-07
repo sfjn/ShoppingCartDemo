@@ -30,28 +30,37 @@ namespace App.ShoppingCartDemo.Web.Controllers
         // DELETE api/<controller>/5
         public HttpResponseMessage Delete(int id)
         {
-            cart.RemoveItem(id);
+            cart.RemoveItem(null);
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
     }
 
     internal class ShoppingCart
     {
+        IList<CartItem> _items = new List<CartItem>()
+        {
+                new CartItem() { Name = "Foobar 1" },
+                new CartItem() { Name = "Foobar 2" },
+                new CartItem() { Name = "Foobar 3" },
+        };
         public IEnumerable<CartItem> GetAllItems()
         {
-            throw new System.NotImplementedException();
+            return _items;
         }
 
         public void AddCartItem(CartItem item)
         {
-            throw new System.NotImplementedException();
+            _items.Add(item);
         }
 
-        public void RemoveItem(int id)
+        public void RemoveItem(CartItem item)
         {
-            throw new System.NotImplementedException();
+            _items.Remove(item);
         }
     }
 
-    public class CartItem { }
+    public class CartItem
+    {
+        public string Name { get; set; }
+    }
 }
