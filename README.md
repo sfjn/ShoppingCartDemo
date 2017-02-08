@@ -1,11 +1,11 @@
-# Shopping Cart Demo made for [![Serenata Flowers](http://images.serenataassets.com/image/upload/v1/serenatalogo-site.png)]
+    # Shopping Cart Demo made for ![Serenata Flowers](http://images.serenataassets.com/image/upload/v1/serenatalogo-site.png)
 
 ## Author
 This project was coded by Johan Nordstrom to gauge programming capabilities. 
 
 ## Technologies 
 This project is built using ASP.NET Web API, Angular 2 and Bootstrap 3
-for the front-end framework. I choosed Angular since it was the easiest to 
+    for the front-end framework. I choosed Angular since it was the easiest to 
 get started with and provides great SPA functionality. 
 
 ## Summary
