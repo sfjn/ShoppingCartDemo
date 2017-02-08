@@ -1,6 +1,4 @@
-﻿
-
-namespace ShoppingCartDemo.Common
+﻿namespace ShoppingCartDemo.Common
 {
     public class AutoMapper
     {

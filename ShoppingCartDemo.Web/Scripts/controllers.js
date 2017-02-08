@@ -11,17 +11,9 @@ angular.module('app.controllers', [])
             $scope.cart = [];
             $scope.items = [];
 
-            function refreshCart() {
-                $http.get('/api/cart/')
-                    .success(function(data) {
-                        $scope.cart = data;
-                    });
-            };
-
             $scope.addItem = function(item) {
                 $http.post('/api/cart/', item)
                     .success(function() {
-                        //refreshCart();
                         $window.location.href = '/cart';
                     });
                 $scope.item = {};
@@ -35,6 +27,13 @@ angular.module('app.controllers', [])
             };
 
             $scope.sortExpression = "Name";
+
+            function refreshCart() {
+                $http.get('/api/cart/')
+                    .success(function(data) {
+                        $scope.cart = data;
+                    });
+            };
 
             function refreshItems() {
                 $http.get('/api/product/')

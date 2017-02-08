@@ -1,6 +1,4 @@
 ﻿namespace ShoppingCartDemo.Core
 {
-    public class Logger
-    {
-    }
+    public class Logger { }
 }

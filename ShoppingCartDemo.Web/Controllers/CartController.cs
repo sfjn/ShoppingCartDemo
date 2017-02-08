@@ -35,10 +35,10 @@ namespace App.ShoppingCartDemo.Web.Controllers
         }
 
         // DELETE api/<controller>/5
-        public HttpResponseMessage Clear()
-        {
-            cart.RemoveAll();
-            return new HttpResponseMessage(HttpStatusCode.OK);
-        }
+        //public HttpResponseMessage Clear()
+        //{
+        //cart.RemoveAll();
+        //return new HttpResponseMessage(HttpStatusCode.OK);
+        //}
     }
 }

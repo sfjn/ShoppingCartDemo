@@ -26,6 +26,7 @@ namespace App.ShoppingCartDemo.Web
             app.UseWebApi(httpConfiguration);
             app.UseStageMarker(PipelineStage.MapHandler);
             //ShoppingCartDemo.Common.AutoMapper.Initialize();
+            //WebApiConfig.Register(httpConfiguration);
         }
     }
 }
