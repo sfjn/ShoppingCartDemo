@@ -1,4 +1,4 @@
-    # Shopping Cart Demo made for ![Serenata Flowers](http://images.serenataassets.com/image/upload/v1/serenatalogo-site.png)
+# Shopping Cart Demo made for [!Serenata Flowers](http://images.serenataassets.com/image/upload/v1/serenatalogo-site.png)]
 
 ## Author
 This project was coded by Johan Nordstrom to gauge programming capabilities. 
