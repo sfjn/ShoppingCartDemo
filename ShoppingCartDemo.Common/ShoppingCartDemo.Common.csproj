@@ -7,8 +7,8 @@
     <ProjectGuid>{DA742363-A20A-46A3-9454-C256BF60EA88}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShoppingCartDemo.Core</RootNamespace>
-    <AssemblyName>ShoppingCartDemo.Core</AssemblyName>
+    <RootNamespace>ShoppingCartDemo.Common</RootNamespace>
+    <AssemblyName>ShoppingCartDemo.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <WebGreaseLibPath>..\..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoMapper.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

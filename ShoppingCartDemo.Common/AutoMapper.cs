@@ -1,14 +1,12 @@
 ﻿
 
-namespace ShoppingCartDemo.Core
+namespace ShoppingCartDemo.Common
 {
-    class AutoMapper
+    public class AutoMapper
     {
         public static void Initialize()
         {
-            //Mapper.Initialize(cfg => cfg.CreateMap<Order, OrderDto>());
-            //or
-            //var config = new MapperConfiguration(cfg => cfg.CreateMap<Order, OrderDto>());
+            //var config = new MapperConfiguration(cfg => cfg.CreateMap<ProductViewModel, ProductDto>());
         }
     }
 }

@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using App.ShoppingCartDemo.Web.ViewModels;
+using Microsoft.Owin.Logging;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using App.ShoppingCartDemo.Web.ViewModels;
-using Microsoft.Owin.Logging;
 
 namespace App.ShoppingCartDemo.Web.Controllers
 {
@@ -16,13 +16,13 @@ namespace App.ShoppingCartDemo.Web.Controllers
             cart = new CartViewModel();
         }
 
-        public IEnumerable<CartItemViewModel> Get()
+        public IEnumerable<ProductItemViewModel> Get()
         {
             return cart.GetAllItems();
         }
 
         // POST api/<controller>
-        public void Post(CartItemViewModel item)
+        public void Post(ProductItemViewModel item)
         {
             cart.AddCartItem(item);
         }
@@ -30,7 +30,14 @@ namespace App.ShoppingCartDemo.Web.Controllers
         // DELETE api/<controller>/5
         public HttpResponseMessage Delete(int id)
         {
-            cart.RemoveItem(null);
+            cart.RemoveItem(id);
+            return new HttpResponseMessage(HttpStatusCode.OK);
+        }
+
+        // DELETE api/<controller>/5
+        public HttpResponseMessage Clear()
+        {
+            cart.RemoveAll();
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
     }

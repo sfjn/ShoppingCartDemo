@@ -14,7 +14,7 @@ describe('Controllers: HomeCtrl', function () {
     }));
 
     it('should set a page title', function () {
-        expect($scope.$root.title).toBe('AngularJS SPA Template for Visual Studio');
+        expect($scope.$root.title).toBe('Shopping Cart Demo For Serenata Flowers | Home');
     });
 });
 

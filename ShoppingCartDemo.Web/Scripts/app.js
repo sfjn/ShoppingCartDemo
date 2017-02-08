@@ -24,7 +24,7 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
             .state('cart', {
                 url: '/cart',
                 templateUrl: '/views/cart',
-                controller: 'CartCtrl'
+                controller: 'HomeCtrl'
             })
             .state('otherwise', {
                 url: '*path',

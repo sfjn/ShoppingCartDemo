@@ -1,28 +1,34 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace App.ShoppingCartDemo.Web.ViewModels
 {
     internal class CartViewModel
     {
-        IList<CartItemViewModel> _items = new List<CartItemViewModel>()
+        public CartViewModel()
         {
-            new CartItemViewModel() { Name = "Foobar 1" },
-            new CartItemViewModel() { Name = "Foobar 2" },
-            new CartItemViewModel() { Name = "Foobar 3" },
-        };
-        public IEnumerable<CartItemViewModel> GetAllItems()
+            if (_items == null)
+                _items = new List<ProductItemViewModel>();
+        }
+        private static IList<ProductItemViewModel> _items;
+        public IEnumerable<ProductItemViewModel> GetAllItems()
         {
             return _items;
         }
 
-        public void AddCartItemViewModel(CartItemViewModel item)
+        public void AddCartItem(ProductItemViewModel item)
         {
             _items.Add(item);
         }
 
-        public void RemoveItem(CartItemViewModel item)
+        public void RemoveItem(int id)
         {
-            _items.RemoveAt(_items.IndexOf(item));
+            _items.Remove(_items.Where(x => x.Id == id).First());
+        }
+
+        public void RemoveAll()
+        {
+            _items.Clear();
         }
     }
 }
